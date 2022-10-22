@@ -11,12 +11,13 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     body {
-      position: absolute;
       background: #F3EAE3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     #box-01 {
-      position:absolute;
       width: 600px;
       height: 450px;
       background: #FFFFFF;
@@ -89,7 +90,7 @@
 
     #price01  {
       /* border: 2px solid red; */
-      margin: 34px 11px 30px 30px;
+      margin: 34px 11px 30px 70px;
       font-family: 'Inknut Antiqua';
       font-style: normal;
       font-weight: 400;
@@ -116,6 +117,14 @@
       height: 47px;
       background: #3D8168;
       border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Letras*/
+      font-family: 'Inknut Antiqua';
+      font-style: normal;
+      color: #F5FFFD;
+      gap: 0.5rem;
     }
 
     /* .attribution { font-size: 11px; text-align: center; }
@@ -136,7 +145,7 @@
         <div id="price01">$149.99</div>
         <div id="price02">$169.99</div>
       </div>
-      <div id="addbtn">Add to Cart</div>
+      <div id="addbtn"><img id="icon" src="./images/icon-cart.svg" alt="" width="20px" height="20px">Add to Cart</div>
     </div>
   </div>
   <!-- <div class="attribution">

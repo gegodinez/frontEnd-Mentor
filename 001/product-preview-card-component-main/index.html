@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" &amp;gt;> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Product preview card component</title>
@@ -15,9 +14,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      box-sizing: border-box;
     }
 
-    #box-01 {
+    .content {
       width: 600px;
       height: 450px;
       background: #FFFFFF;
@@ -25,27 +25,27 @@
       display: flex;
     }
 
-    #sub-01 {
-      width: 300px;
-      height: 450px;
+    .aside {
+      /* border: 2px solid red; */
+      width: 100%;
+      height: auto;
     }
 
-    #sub-02 {
-      width: 300px;
-      height: 450px;
-    }
-
-    #ima {
-      position: absolute;
-      width: 300px;
-      height: 450px;
+    .image {
       border-radius: 12px;
     }
 
-    #categ {
+    .bside {
+      /* border: 2px solid blue; */
+      width: 100%;
+      height: auto;
+    }
+
+    .categ {
       /* border: 2px solid red; */
-      width: 93px;
-      height: 15px;
+      width: 50%;
+      height: auto;
+      margin: 10% 5% 0% 10%;
       font-family: 'Inter';
       font-style: normal;
       font-weight: 400;
@@ -54,13 +54,11 @@
       /* identical to box height */
       letter-spacing: 0.5em;
       color: #777781;
-      /*       top  rith  btn  left  */
-      margin: 32px 176px 19px 30px;
     }
 
-    #title {
+    .title {
       /* border: 2px solid red; */
-      margin: 19px 40px 43px 30px;
+      margin: 10% 5% 0% 10%;
       font-family: 'Inknut Antiqua';
       font-style: normal;
       font-weight: 700;
@@ -72,9 +70,9 @@
       color: #141B21;
     }
     
-    #desc  {
+    .descrip  {
       /* border: 2px solid red; */
-      margin: 33px 36px 0% 30px;
+      margin: 10% 5% 0% 10%;
       font-family: 'Inter';
       font-style: normal;
       font-weight: 700;
@@ -83,14 +81,17 @@
       color: #72757E;
     }
 
-    #price  {
+    .price  {
       /* border: 2px solid red; */
       display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10% 5% 0% 10%;
+      gap: 2rem;
     }
 
     #price01  {
       /* border: 2px solid red; */
-      margin: 34px 11px 30px 70px;
       font-family: 'Inknut Antiqua';
       font-style: normal;
       font-weight: 400;
@@ -101,7 +102,6 @@
 
     #price02  {
       /* border: 2px solid red; */
-      margin: 42px 69px 39px 11px;
       font-family: 'Inknut Antiqua';
       font-style: normal;
       font-weight: 400;
@@ -110,8 +110,8 @@
       color: #6F6F7B;
     }
 
-    #addbtn  {
-      margin: 0% 33px 33px 32px;
+    .add  {
+      margin: 10% 10% 0% 10%;
       /* border: 2px solid red; */
       width: 234px;
       height: 47px;
@@ -127,25 +127,36 @@
       gap: 0.5rem;
     }
 
-    /* .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); } */
+    @media only screen and (max-width: 600px) {
+      .content {
+        display: grid;
+        width: auto;
+        height: auto;
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding-bottom: 5%;
+      }
+    }
   </style>
 </head>
 <body>
-  <div id="box-01">
-    <div id="sub-01">
-      <img src="./images/image-product-desktop.jpg" alt="" id="ima">
+  <div class="content">
+    <div class="aside">
+      <img src="./images/image-product-desktop.jpg" style="width: 100%;" alt="" id="ima" class="image">
     </div>
-    <div id="sub-02">
-      <div id="categ">Preview</div>
-      <h2 id="title">Gabrielle Essence Eau De Parfum</h2>
-      <p id="desc">A floral, solar and voluptuous interpretation composed by Olivier Polge,
-      Perfumer-Creator for the House of CHANEL.</p>
-      <div id="price">
+    <div class="bside">
+      <div class="categ">Preview</div>
+      <div class="title">Gabrielle Essence Eau De Parfum</div>
+      <div class="descrip">
+        <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+      </div>
+      <div class="price">
         <div id="price01">$149.99</div>
         <div id="price02">$169.99</div>
       </div>
-      <div id="addbtn"><img id="icon" src="./images/icon-cart.svg" alt="" width="20px" height="20px">Add to Cart</div>
+      <div class="add">
+        <img id="icon" alt="" src="./images/icon-cart.svg" width="14.38" height="16">Add to Cart
+      </div>
     </div>
   </div>
   <!-- <div class="attribution">
